@@ -29,4 +29,13 @@ const fileSchema=new Schema({
     timestamps:true
 });
 
-interface IFile extends Doc
+interface IFile extends Document{
+    filename:string;
+    secure_url:string;
+    sizeInBytes:string;
+    format:string;
+    sender?:string;
+    receiver?:string;
+}
+
+export default mongoose.model<IFile>("File",fileSchema)
