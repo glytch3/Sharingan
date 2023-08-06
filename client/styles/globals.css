@@ -31,7 +31,18 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-/* create component class */
+@font-face {
+  font-family: 'quico';
+  src: url('../public/fonts/QuicoDisplay-Bold.ttf');
+}
+@font-face {
+  font-family: 'notosans';
+  src: url('../public/fonts/NotoSans-ExtraLight.ttf');
+}
+
+body {
+  font-family: 'noto-sans', sans-serif;
+}
 
 @layer components {
   .button {

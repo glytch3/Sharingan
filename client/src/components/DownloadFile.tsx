@@ -1,21 +1,22 @@
+import "../../styles/DownloadFile.css";
+
 const DownloadFile = ({ downloadPageLink }) => {
-    return (
-      <div className="p-1">
-        <h1 className="my-2 text-lg font-medium">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique,
-          repudiandae.
-        </h1>
-        <div className="flex space-x-3">
-          <span className="break-all">{downloadPageLink}</span>
-          <img
-            src="/images/copy.png"
-            alt=""
-            className="object-contain w-8 h-8 cursor-pointer"
-            onClick={() => navigator.clipboard.writeText(downloadPageLink)}
-          />
-        </div>
+  return (
+    <div className="download-file mx-6 p-0 ">
+      <h2 className="my-0">
+        Here's the link to share the file:
+      </h2>
+      <div className="flex space-x-3 p-1  items-center ">
+        <span className="break-all text-sm">{downloadPageLink}</span>
+        <img
+          src="/images/copy.png"
+          alt=""
+          className="object-contain w-6 h-6 cursor-pointer"
+          onClick={() => navigator.clipboard.writeText(downloadPageLink)}
+        />
       </div>
-    );
-  };
-  
-  export default DownloadFile;
+    </div>
+  );
+};
+
+export default DownloadFile;

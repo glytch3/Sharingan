@@ -1,5 +1,6 @@
 import { Dispatch, FunctionComponent, useCallback, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
+import "../../styles/DropZoneComponent.css";
 
 const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({
   setFile
@@ -23,10 +24,8 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({
 
   return (
     <div className="w-full p-4">
-      <div
-        {...getRootProps()}
-        className="w-full rounded-md cursor-pointer h-80 focus:outline-none"
-      >
+      <div {...getRootProps()} className="w-full rounded-md cursor-pointer h-80 focus:outline-none drop-zone">
+
         <input {...getInputProps()} />
         <div
           className={
@@ -42,9 +41,9 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({
           ) : (
             <>
               <p>Drag & Drop Files Here</p>
-              <p className="mt-2 text-base text-gray-300">
+              {/* <p className="mt-2 text-base text-gray-300">
                 All files supported
-              </p>
+              </p> */}
             </>
           )}
         </div>
