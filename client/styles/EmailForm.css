@@ -2,3 +2,8 @@
     font-family: 'Noto Sans', sans-serif;
   }
   
+  .gradient-text-email {
+    background: linear-gradient(to right, #b5c4d4, #439fdb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

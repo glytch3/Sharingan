@@ -72,8 +72,8 @@ export default function Home() {
             <div className="p-2 text-center">
               <DownloadFile downloadPageLink={downloadPageLink} />
               <EmailForm id={id} />
-              <button className="button" onClick={resetComponent}>
-                Upload New File
+              <button className="button " onClick={resetComponent}>
+              <span className="gradient-text-upload">Upload New File</span>
               </button>
             </div>
           )}
