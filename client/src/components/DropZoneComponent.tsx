@@ -13,7 +13,7 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({
     useDropzone({
       onDrop,
       multiple: false,
-      accept: "image/jpeg, image/png, audio/mpeg",
+      accept: "video/*, image/*, application/pdf, text/csv",
     });
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({
             <>
               <p>Drag & Drop Files Here</p>
               <p className="mt-2 text-base text-gray-300">
-                Only jpeg , png & mp3 files supported
+                All files supported
               </p>
             </>
           )}
