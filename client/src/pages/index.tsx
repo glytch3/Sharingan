@@ -3,17 +3,19 @@ import RenderFile from "@/components/RenderFile";
 import axios from "axios";
 import { useState } from "react";
 import DownloadFile from "@/components/DownloadFile";
+import EmailForm from "@/components/EmailForm";
 
 export default function Home() {
   const [file, setFile] = useState(null);
   const [id, setId] = useState(null);
   const [downloadPageLink, setDownloadPageLink] = useState(null);
-  const [uploadState, setUploadState] = useState<
-    "Uploading" | "Upload Failed" | "Uploaded" | "Upload"
-  >("Upload");
+  const [uploadState, setUploadState] =
+  useState<"Uploading" | "Upload Failed" | "Uploaded" | "Upload">("Upload");
+
 
   const handleUpload = async () => {
     if (uploadState === "Uploading") return;
+    setUploadState("Uploading");
     const formData = new FormData();
     formData.append("myFile", file);
     try {
@@ -40,8 +42,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="my-4 text-3xl font-medium">Sharingan</h1>
+<div className="flex flex-col items-center justify-center">      <h1 className="my-4 text-3xl font-medium">Sharingan</h1>
       <div className="flex flex-col items-center justify-center bg-gray-800 shadow-xl w-96 rounded-xl">
       {!downloadPageLink && <DropZoneComponent setFile={setFile} />}
 
@@ -61,9 +62,10 @@ export default function Home() {
           </button>
         )}
 
-        {downloadPageLink && (
+{downloadPageLink && (
           <div className="p-2 text-center">
             <DownloadFile downloadPageLink={downloadPageLink} />
+            <EmailForm id={id} />
             <button className="button" onClick={resetComponent}>
               Upload New File
             </button>
