@@ -29,18 +29,18 @@ const DropZoneComponent: FunctionComponent<{ setFile: Dispatch<any> }> = ({
         <input {...getInputProps()} />
         <div
           className={
-            "flex flex-col items-center justify-center h-full space-y-3 border-2 border-solid border-yellow-light rounded-xl " +
+            "flex flex-col items-center justify-center h-full space-y-10 border-2 border-dashed border-orange-500 rounded-xl " +
             (isDragReject === true ? "border-red-500" : "") +
             (isDragAccept === true ? "border-green-500" : "")
           }
         >
           {" "}
-          <img src="/images/folder.png" alt="folder" className="w-16 h-16" />
+          <img src="/images/folder.png" alt="folder" className="w-20 h-20" />
           {isDragReject ? (
-            <p>Sorry, This app only supports images and mp3</p>
+            <p>Sorry, This app does not support this format</p>
           ) : (
             <>
-              <p>Drag & Drop Files Here</p>
+              <p>Choose a file or drag it here.</p>
               {/* <p className="mt-2 text-base text-gray-300">
                 All files supported
               </p> */}

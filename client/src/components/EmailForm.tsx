@@ -51,7 +51,7 @@ const EmailForm: FunctionComponent<{
           value={emailTo}
         />
         <button className="button" type="submit">
-        <span className="gradient-text-email">Email</span>
+        <span className="gradient-text-email">Send Email</span>
         </button>
       </form>
       {message && <p className="font-medium text-red-500">{message}</p>}

@@ -10,7 +10,8 @@ const RenderFile: FunctionComponent<{
 
   return (
     <div className="file-info flex items-center w-auto p-4 my-2">
-      <img src={`/images/${format}.png`} alt="" className="w-10 h-10" />
+      {/* <img src={`/images/${format}.png`} alt="" className="w-10 h-10" /> */}
+      <img src={`/images/file.svg`} alt="" className="w-10 h-10" />
       <span className="mx-2">{truncatedName}</span>
       <span className="ml-auto">( {sizeInMb(sizeInBytes)})</span>
     </div>

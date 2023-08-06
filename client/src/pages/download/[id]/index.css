@@ -1,0 +1,22 @@
+
+.downloadtext{
+    font-family: notosans;
+}
+
+
+h1 {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+
+button {
+    font-family: 'quico';
+    font-size: 18px;
+  }
+
+  .gradient-text-upload {
+    background: linear-gradient(to right, #ff0000, #ff7f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
