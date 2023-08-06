@@ -40,12 +40,17 @@ body {
   src: url('../public/fonts/NotoSans-ExtraLight.ttf');
 }
 
-body {
-  font-family: 'noto-sans', sans-serif;
-}
-
 @layer components {
   .button {
     @apply p-2 my-5 bg-gray-900 rounded-md w-44 focus:outline-none;
   }
+}
+
+body {
+  font-family: 'noto-sans', sans-serif;
+}
+
+.bg-image {
+  background: url("../public/sharingan.jpeg") no-repeat center center fixed;
+  background-size: cover;
 }

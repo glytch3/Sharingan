@@ -43,39 +43,41 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="my-4 text-transparent bg-gradient-to-r from-red-500 to-red-700 bg-clip-text">
-        Sharingan
-      </h1>
+    <div className="bg-image">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="my-4 text-transparent bg-gradient-to-r from-red-500 to-red-700 bg-clip-text">
+          Sharingan
+        </h1>
 
-      <div className="flex flex-col items-center justify-center bg-gray-800 shadow-xl w-96 rounded-xl">
-        {!downloadPageLink && <DropZoneComponent setFile={setFile} />}
+        <div className="flex flex-col items-center justify-center bg-black shadow-xl w-96 rounded-xl">
+          {!downloadPageLink && <DropZoneComponent setFile={setFile} />}
 
-        {file && (
-          <RenderFile
-            file={{
-              format: file.type.split("/")[1],
-              name: file.name,
-              sizeInBytes: file.size,
-            }}
-          />
-        )}
+          {file && (
+            <RenderFile
+              file={{
+                format: file.type.split("/")[1],
+                name: file.name,
+                sizeInBytes: file.size,
+              }}
+            />
+          )}
 
-        {!downloadPageLink && file && (
-          <button className="button" onClick={handleUpload}>
-            {uploadState}
-          </button>
-        )}
-
-        {downloadPageLink && (
-          <div className="p-2 text-center">
-            <DownloadFile downloadPageLink={downloadPageLink} />
-            <EmailForm id={id} />
-            <button className="button" onClick={resetComponent}>
-              Upload New File
+          {!downloadPageLink && file && (
+            <button className="button" onClick={handleUpload}>
+              {uploadState}
             </button>
-          </div>
-        )}
+          )}
+
+          {downloadPageLink && (
+            <div className="p-2 text-center">
+              <DownloadFile downloadPageLink={downloadPageLink} />
+              <EmailForm id={id} />
+              <button className="button" onClick={resetComponent}>
+                Upload New File
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
