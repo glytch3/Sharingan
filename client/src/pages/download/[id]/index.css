@@ -12,11 +12,20 @@ h1 {
 
 button {
     font-family: 'quico';
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .gradient-text-upload {
     background: linear-gradient(to right, #ff0000, #ff7f00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .failedcontainer{
+    padding: 0px 20px;
+  }
+  .failedtext{
+    font-family: notosans;
+    color: #ff7f00;
+    font-weight: bold;
   }

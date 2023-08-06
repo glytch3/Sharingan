@@ -21,7 +21,14 @@ const index: NextPage<{
   return (
 <div className="flex flex-col items-center justify-center py-14 space-y-7 bg-black rounded-md shadow-xl w-96 border-2 border-gray-500 downloadtext">
       {!id ? (
-        <span>oops! File does not exist! check the URL</span>
+        <div className="failedcontainer flex flex-row items-center justify-center space-x-6 ">
+          <img
+                src="/images/failedicon.png"
+                alt=""
+                className="w-16 h-16"
+              />
+        <span className="failedtext">Lost in the digital wilderness! The requested file is nowhere to be found.</span>
+        </div>
       ) : (
         <>
           <RenderFile file={{ format, name, sizeInBytes }} />
